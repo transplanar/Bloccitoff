@@ -41,4 +41,10 @@ Rails.application.configure do
 
   # NOTE Added by GPC 11.22.15
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # NOTE Needed? Outdated?
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+
+  # NOTE Needed for current ver of Heroku?
+  # config.assets.initialize_on_precompile = false
 end
