@@ -30,3 +30,5 @@ gem 'turbolinks'
 
 # Used for user authentication
 gem 'devise'
+
+gem 'figaro', '1.0'
