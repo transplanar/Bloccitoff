@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'users_controller/show'
+  # get 'user/show'
+
+  # get 'users_controller/show'
 
   devise_for :users
 
   # root to: "home#index"
-  root to: "users#show"
+  root to: 'users#show'
 end
