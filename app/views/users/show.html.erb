@@ -1,3 +1,14 @@
 <h1>Yay! You made it <%= @user.email %>!</h1>
 
 <p>You are the best user ever! </p>
+
+<h2>Your Items:</h2>
+
+<%= render @user.items %>
+
+<!-- <%# render 'comments/form', comment: Comment.new, post: @post %> -->
+
+
+<!--TODO Ajax and Partial  -->
+<!--TODO Install Bootstrap  -->
+<!--REVIEW Setting up the correct vars to make item form work  -->
