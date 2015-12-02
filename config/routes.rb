@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'items/create'
+  # get 'items/create'
 
   # get 'user/show'
 
@@ -9,12 +9,15 @@ Rails.application.routes.draw do
   devise_for :users
 
 # REVIEW Needed?
-  resources :users
+  resources :users do
+    resources :items, only: [:create]
+  end
   # devise_for :users do
     # resources :items, only: [:create]
   # end
 
-  resources :items, only: [:create]
+# NOTE Test of nesting
+  # resources :items, only: [:create]
 
   # root to: "home#index"
   root to: 'users#show'
