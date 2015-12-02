@@ -12,3 +12,11 @@
 <!--TODO Ajax and Partial  -->
 <!--TODO Install Bootstrap  -->
 <!--REVIEW Setting up the correct vars to make item form work  -->
+
+<h4>New Task</h4>
+  <!-- TODO Add remote: true for Ajax -->
+  <!-- <%# form_for [current_user, Item.new], remote: true do |f| %> -->
+<!-- <%# form_for [current_user, Item.new] do |f| %> -->
+
+<%# REVIEW: is this the most efficient syntax? %>
+<%= render 'items/_form' %>
