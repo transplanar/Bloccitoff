@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
 
   has_many :items
 
+# TODO Add dependant: :destroy later
+
 end
