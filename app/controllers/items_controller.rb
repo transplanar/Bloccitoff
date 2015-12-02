@@ -7,7 +7,8 @@ class ItemsController < ApplicationController
       # TODO Remove this line after Ajax implementation
       # FIXME nesting under user isn't working
       # redirect_to [current_user, @item]
-      redirect_to current_user
+      # redirect_to current_user
+      redirect_to current_member
       # user_path(current_user)
     else
       flash[:error] = "Error saving task. Please try again."

@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   # get 'users_controller/show'
 
   #REVIEW is routing for items correct?
-  devise_for :users
+  # devise_for :users
+  devise_for :users, controllers: { sessions: "users/sessions" }
 
 # REVIEW Needed?
-  resources :users
+  # resources :users
   # devise_for :users do
     # resources :items, only: [:create]
   # end

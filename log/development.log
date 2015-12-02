@@ -10371,3 +10371,60 @@ Processing by UsersController#show as HTML
   Rendered items/_item.html.erb (0.3ms)
   Rendered users/show.html.erb within layouts/application (2.5ms)
 Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-02 16:50:52 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 1]]
+  Rendered items/_item.html.erb (0.3ms)
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 70ms (Views: 54.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-02 16:51:01 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjk98Yv/3uNjPQPRqU2hRdobtsf/LoMwbS7vqYBzRpSgXJFQudjdTb3D9wPSfiDcxlaxpmv8JRrDcnRy2AuMzA==", "item"=>{"name"=>"testing"}, "commit"=>"Add Task"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testing"], ["user_id", 1], ["created_at", "2015-12-02 21:51:01.009169"], ["updated_at", "2015-12-02 21:51:01.009169"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to 
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.1ms)
+
+NoMethodError (undefined method `user_url' for #<ItemsController:0x007f154166d430>):
+  app/controllers/items_controller.rb:10:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-02 16:51:55 -0500
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 1]]
+  Rendered items/_item.html.erb (0.6ms)
+  Rendered users/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 80ms (Views: 63.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-02 16:51:59 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+W683Zc/fjuA2vJ5TURu3oqlT0txUJJA0KTswgf0VsbvCxB8pRh9lV4kBqs2d+9HluhIKuWCNGp++HcZX4ycng==", "item"=>{"name"=>"Gogogogogo"}, "commit"=>"Add Task"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gogogogogo"], ["user_id", 1], ["created_at", "2015-12-02 21:51:59.987291"], ["updated_at", "2015-12-02 21:51:59.987291"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 5.0ms)
+
+NameError (undefined local variable or method `current_member' for #<ItemsController:0x007f15416cad88>):
+  app/controllers/items_controller.rb:11:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
