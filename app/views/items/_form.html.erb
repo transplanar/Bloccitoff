@@ -1,7 +1,7 @@
 <!-- TODO Add remote: true for Ajax -->
 <!-- <%# form_for [current_user, Item.new], remote: true do |f| %> -->
 
-<%= form_for [current_user, Item.new] do |f| %>
+<%= form_for Item.new do |f| %>
   <div class="form-group">
     <%= f.label :name, class: 'sr-only' %>
     <%= f.text_field :name, class: 'form-control', placeholder: "Describe your new task" %>
