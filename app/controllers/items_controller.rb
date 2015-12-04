@@ -3,12 +3,12 @@ class ItemsController < ApplicationController
     @item = current_user.items.new(item_params)
 
     if @item.save
-      flash[:notice] = "Task saved"
-      # TODO Remove this line after Ajax implementation
+      flash[:notice] = 'Task saved'
+      # TODO: Remove this line after Ajax implementation
       redirect_to current_user
     else
-      flash[:error] = "Error saving task. Please try again."
-      # TODO Remove this line after Ajax implementation
+      flash[:error] = 'Error saving task. Please try again.'
+      # TODO: Remove this line after Ajax implementation
       render :new
     end
 
@@ -23,16 +23,22 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = current_user.items.find(params[:id])
+
     item_log = @item.name
 
     if @item.destroy
       flash[:notice] = "Task \"#{item_log}\" destroyed"
-      # TODO Remove this line after Ajax implementation
-      redirect_to current_user
+      # TODO: Remove this line after Ajax implementation
+      # redirect_to current_user
     else
-      flash[:error] = "Error deleting task. Please try again."
-      # TODO Remove this line after Ajax implementation
-      render :show
+      flash[:error] = 'Error deleting task. Please try again.'
+      # TODO: Remove this line after Ajax implementation
+      # render :show
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
