@@ -34,3 +34,5 @@ gem 'devise'
 gem 'figaro', '1.0'
 
 gem 'faker'
+
+gem 'bootstrap-sass'

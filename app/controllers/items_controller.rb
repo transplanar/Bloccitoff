@@ -21,6 +21,21 @@ class ItemsController < ApplicationController
     #  end
   end
 
+  def destroy
+    @item = current_user.items.find(params[:id])
+    item_log = @item.name
+
+    if @item.destroy
+      flash[:notice] = "Task \"#{item_log}\" destroyed"
+      # TODO Remove this line after Ajax implementation
+      redirect_to current_user
+    else
+      flash[:error] = "Error deleting task. Please try again."
+      # TODO Remove this line after Ajax implementation
+      render :show
+    end
+  end
+
   private
 
   def item_params
