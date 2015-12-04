@@ -1,9 +1,10 @@
 class ItemsController < ApplicationController
   def create
     @item = current_user.items.new(item_params)
+    item_log = @item.name
 
     if @item.save
-      flash[:notice] = 'Task saved'
+      flash[:notice] = "Task \"#{item_log}\" created"
       # TODO: Remove this line after Ajax implementation
       redirect_to current_user
     else
