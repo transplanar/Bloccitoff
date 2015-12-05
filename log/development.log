@@ -19177,3 +19177,479 @@ Processing by ItemsController#destroy as JS
   [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
   Rendered items/destroy.js.erb (0.1ms)
 Completed 200 OK in 13ms (Views: 3.1ms | ActiveRecord: 4.8ms)
+
+
+Started DELETE "/items/157" for 127.0.0.1 at 2015-12-05 14:13:24 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"157"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 157]]
+  Rendered items/destroy.js.erb (0.5ms)
+Completed 200 OK in 20ms (Views: 2.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (1.3ms)
+  Rendered items/_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 85ms (Views: 68.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/users_controller.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/application.self-35aa87086e06b796880079028e991cfa2f2ab0cfb27302812fc79b09d740a853.css?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/users_controller.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-05 14:13:58 -0500
+
+
+Started DELETE "/items/157" for 127.0.0.1 at 2015-12-05 14:14:00 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"157"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 157]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 157]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  Rendered items/destroy.js.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 3.7ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/items/159" for 127.0.0.1 at 2015-12-05 14:14:02 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"159"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1  [["user_id", 12], ["id", 159]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 159]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  Rendered items/destroy.js.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 4.5ms | ActiveRecord: 5.0ms)
+
+
+Started DELETE "/items/156" for 127.0.0.1 at 2015-12-05 14:20:52 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"156"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 156]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 156]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  Rendered items/destroy.js.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 3.5ms | ActiveRecord: 5.6ms)
+
+
+Started DELETE "/items/162" for 127.0.0.1 at 2015-12-05 14:20:54 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"162"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1  [["user_id", 12], ["id", 162]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 162]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  Rendered items/destroy.js.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/items/151" for 127.0.0.1 at 2015-12-05 14:21:20 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"151"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 151]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 151]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  Rendered items/destroy.js.erb (0.7ms)
+Completed 200 OK in 13ms (Views: 2.7ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:01 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3K6APa7qJ83YbTDxUJ021VAWXpgfbD7ExAD9LmWqLKYIddzApX4AzSGGOToRM0RewZZVcUQiYOWWc9XnacmuKg==", "item"=>{"name"=>"klfdhaskjfasd"}, "commit"=>"Add Task"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "klfdhaskjfasd"], ["user_id", 12], ["created_at", "2015-12-05 19:22:01.808045"], ["updated_at", "2015-12-05 19:22:01.808045"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 15ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.6ms)
+  Rendered items/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 66ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:04 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pH1IWt8WboCP4sHBdy29/mfWdNeCyVfFFxtTmGrjpnJwphSn1IJJgHYJyAo2g8919lZ/PtmHCeRFaHtRZoAk/g==", "item"=>{"name"=>"jkfhsa"}, "commit"=>"Add Task"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "jkfhsa"], ["user_id", 12], ["created_at", "2015-12-05 19:22:04.277732"], ["updated_at", "2015-12-05 19:22:04.277732"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 10ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:04 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.4ms)
+  Rendered items/_form.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:06 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5i/XbFKGRtwqaf+YIKVWRHLvjX/s9NvlN7QYKJw8t7oy9IuRWRJh3NOC9lNhCyTP42+Glre6hcRlxzDhkF81Ng==", "item"=>{"name"=>"kjjkfds"}, "commit"=>"Add Task"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "kjjkfds"], ["user_id", 12], ["created_at", "2015-12-05 19:22:06.297434"], ["updated_at", "2015-12-05 19:22:06.297434"]]
+  [1m[35m (5.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 12ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:06 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.7ms)
+  Rendered items/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 71ms (Views: 69.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:08 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/RIlzyaU8qzN9u8uy4CESHp2/G0c/bpIaYP9Vl19hVYpyXkyLQDVrDQd5uWKLvbD6/b3hEez5Gk78NWfUR4H2g==", "item"=>{"name"=>"kfsdhj"}, "commit"=>"Add Task"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "kfsdhj"], ["user_id", 12], ["created_at", "2015-12-05 19:22:08.546158"], ["updated_at", "2015-12-05 19:22:08.546158"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 12ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT "items".* FROM "items" WHERE "items"."user_id" = ?  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.7ms)
+  Rendered items/_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 126ms (Views: 124.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/items/164" for 127.0.0.1 at 2015-12-05 14:22:10 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"164"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1  [["user_id", 12], ["id", 164]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 164]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  Rendered items/destroy.js.erb (1.8ms)
+Completed 200 OK in 20ms (Views: 6.9ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:31 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OuPCudvtKvFfJ3iiWVaAU1ryUPNGdXxKM5P8WECShivuOJ5E0HkN8abMcWkY+PLYy3JbGh07Imth4NSRTPEEpw==", "item"=>{"name"=>"kjhfkjasd"}, "commit"=>"Add Task"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "kjhfkjasd"], ["user_id", 12], ["created_at", "2015-12-05 19:22:31.312696"], ["updated_at", "2015-12-05 19:22:31.312696"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 11ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:31 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.7ms)
+  Rendered items/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:34 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ik/iNik/T7X2tB9LY4Obs6OJEuJkiBsPLKg+dmOPX1delL7LIqtotQ9fFoAiLek4MgkZCz/GRS5+2xa/b+zd2w==", "item"=>{"name"=>"dhdfbfi"}, "commit"=>"Add Task"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "dhdfbfi"], ["user_id", 12], ["created_at", "2015-12-05 19:22:34.911333"], ["updated_at", "2015-12-05 19:22:34.911333"]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 10ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.8ms)
+  Rendered items/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:22:38 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4hZS3DtlVIn1/eMMO0TkJnkKQIK9NqoDgt3bAPHlHNA2zQ4hMPFziQwW6sd66pat6IpLa+Z49CLQrvPJ/YaeXA==", "item"=>{"name"=>"Hello"}, "commit"=>"Add Task"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Hello"], ["user_id", 12], ["created_at", "2015-12-05 19:22:38.695903"], ["updated_at", "2015-12-05 19:22:38.695903"]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 14ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:22:38 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (1.2ms)
+  Rendered items/_form.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (1.5ms)
+  Rendered items/_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 80ms (Views: 77.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/users_controller.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/application.self-35aa87086e06b796880079028e991cfa2f2ab0cfb27302812fc79b09d740a853.css?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/users_controller.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-05 14:23:33 -0500
+
+
+Started DELETE "/items/167" for 127.0.0.1 at 2015-12-05 14:23:35 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"167"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 167]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 167]]
+  [1m[35m (5.1ms)[0m  commit transaction
+  Rendered items/destroy.js.erb (1.2ms)
+Completed 200 OK in 17ms (Views: 5.8ms | ActiveRecord: 5.9ms)
+
+
+Started DELETE "/items/168" for 127.0.0.1 at 2015-12-05 14:23:49 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"168"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1  [["user_id", 12], ["id", 168]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 168]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  Rendered items/destroy.js.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.8ms)
+  Rendered items/_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/users_controller.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/application.self-35aa87086e06b796880079028e991cfa2f2ab0cfb27302812fc79b09d740a853.css?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/bootstrap.self-6c92f650931beefe48977f272b7015d6b9b45da8b09831ebf88e05193c12d355.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/users_controller.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-12-05 14:27:05 -0500
+
+
+Started DELETE "/items/166" for 127.0.0.1 at 2015-12-05 14:27:07 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"166"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 166]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 166]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  Rendered items/destroy.js.erb (0.9ms)
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 4.4ms)
+
+
+Started DELETE "/items/169" for 127.0.0.1 at 2015-12-05 14:29:12 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"169"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 12]]
+  [1m[35mItem Load (0.1ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1  [["user_id", 12], ["id", 169]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = ?  [["id", 169]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  Rendered items/destroy.js.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2015-12-05 14:29:15 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EN8MK4MCTgfap0UBanbM4uLl3dZDmM9wCZhwjK17zKzEBFDWiJZpByNMTMor2L5pc2XWPxjWkVFb61hFoRhOIA==", "item"=>{"name"=>"Hoooooooooooooooooooooooo"}, "commit"=>"Add Task"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Hoooooooooooooooooooooooo"], ["user_id", 12], ["created_at", "2015-12-05 19:29:15.009654"], ["updated_at", "2015-12-05 19:29:15.009654"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/12
+Completed 302 Found in 9ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2015-12-05 14:29:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT "items".* FROM "items" WHERE "items"."user_id" = ?[0m  [["user_id", 12]]
+  Rendered items/_item.html.erb (0.6ms)
+  Rendered items/_form.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 121ms (Views: 119.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/items/165" for 127.0.0.1 at 2015-12-05 14:29:18 -0500
+Processing by ItemsController#destroy as JS
+  Parameters: {"id"=>"165"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 12]]
+  [1m[36mItem Load (0.1ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."user_id" = ? AND "items"."id" = ? LIMIT 1[0m  [["user_id", 12], ["id", 165]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 165]]
+  [1m[35m (4.1ms)[0m  commit transaction
+  Rendered items/destroy.js.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 1.8ms | ActiveRecord: 4.4ms)

@@ -27,15 +27,17 @@ class ItemsController < ApplicationController
 
     item_log = @item.name
 
-    if @item.destroy
-      # flash[:notice] = "Task \"#{item_log}\" destroyed"
-      # TODO: Remove this line after Ajax implementation
-      # redirect_to current_user
-    else
-      flash[:error] = 'Error deleting task. Please try again.'
-      # TODO: Remove this line after Ajax implementation
-      # render :show
-    end
+    @item.destroy
+
+    # if @item.destroy
+    #   # flash[:notice] = "Task \"#{item_log}\" destroyed"
+    #   # TODO: Remove this line after Ajax implementation
+    #   # redirect_to current_user
+    # else
+    #   flash[:error] = 'Error deleting task. Please try again.'
+    #   # TODO: Remove this line after Ajax implementation
+    #   # render :show
+    # end
 
     respond_to do |format|
       format.html
