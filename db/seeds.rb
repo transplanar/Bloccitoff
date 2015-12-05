@@ -13,9 +13,14 @@
   )
 end
 
+User.create!(email: "admin@awesome.com", password: "password")
+
 150.times do
   Item.create!(
     name: Faker::Lorem.sentence,
     user: User.all.sample
   )
 end
+
+puts "#{User.count} users seeded."
+puts "#{Item.count} items seeded."

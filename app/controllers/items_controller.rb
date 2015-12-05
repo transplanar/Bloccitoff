@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
     item_log = @item.name
 
     if @item.destroy
-      flash[:notice] = "Task \"#{item_log}\" destroyed"
+      # flash[:notice] = "Task \"#{item_log}\" destroyed"
       # TODO: Remove this line after Ajax implementation
       # redirect_to current_user
     else

@@ -19,7 +19,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string   :current_sign_in_ip
       t.string   :last_sign_in_ip
 
-# NOTE Implement Confirmable
       ## Confirmable
       t.string   :confirmation_token
       t.datetime :confirmed_at
@@ -37,7 +36,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
-    #NOTE Required for confirmable?
+    #REVIEW Required for confirmable?
     add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end
