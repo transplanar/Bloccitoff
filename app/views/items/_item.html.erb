@@ -1,1 +1,10 @@
-<%= item.name %></br>
+<%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
+<!-- REVIEW what is the purpose of the media-body class here? -->
+<div class="media-body">
+  <small>
+    <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+
+    <%= item.name %></br>
+  </small>
+ </div>
+<% end %>

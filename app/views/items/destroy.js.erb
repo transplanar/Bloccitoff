@@ -1,0 +1,8 @@
+<% if @item.destroyed? %>
+  $('#item-' +<%= @item.id %>).hide();
+  // $(".flash").html("<%= escape_javascript( "Task \" #{@item.name} \" destroyed") %>" );
+  $('.flash').prepend("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button> Task destroyed </div>");
+<% else %>
+  // REVIEW make sure this properly shows alert via flash div of application.html.erb
+  $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %></div>");
+<% end %>

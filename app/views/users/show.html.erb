@@ -1,15 +1,21 @@
-<h1>Yay! You made it <%= @user.email %>!</h1>
+<h1>Yay! You made it
+  <%= @user.email %>!</h1>
 
-<p>You are the best user ever! </p>
+<p>You are the best user ever!
+</p>
 
 <h2>Your Items:</h2>
-
-<%= render @user.items %>
+<div class='js-items'>
+  <%= render @user.items %>
+</div>
 
 <!--TODO Ajax and Partial  -->
-<!--TODO Install Bootstrap  -->
 
-<h4>New Task</h4>
+<div class="row">
+  <div class="col-md-4">
+    <h4>New Task</h4>
 
-<%# REVIEW: is this the most efficient syntax? %>
-<%= render 'items/form' %>
+    <%# REVIEW: is this the most efficient syntax? %>
+    <%= render 'items/form' %>
+  </div>
+</div>

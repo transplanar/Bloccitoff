@@ -26,11 +26,11 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-# NOTE Added by GPC 11.22.15
-
 # Used for user authentication
 gem 'devise'
 
 gem 'figaro', '1.0'
 
 gem 'faker'
+
+gem 'bootstrap-sass'
