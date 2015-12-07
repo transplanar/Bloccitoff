@@ -28,7 +28,7 @@ end
 
 150.times do
   item = Item.all.sample
-  #REVIEW Best method for generating random number? THis created 50+ similar times
+  #REVIEW 3.1 Best method for generating random number? This created 50+ similar times
   item.update_attribute(:created_at, (rand*30 + 6).days.ago)
 end
 

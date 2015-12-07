@@ -1,12 +1,11 @@
 <% if @item.destroyed? %>
+// REVIEW is the item deleted immediately, or just hidden then deleted on next refresh?
   $('#item-' +<%= @item.id %>).hide();
-  // $(".flash").html("<%# escape_javascript( "Task destroyed") %>" );
-  //Original
   $('.flash').prepend("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button> Task destroyed </div>");
-  //Test
-  // $('.flash').prepend("<%# escape_javascript( "<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button> Task destroyed </div>") ) %>");
 
+  //REVIEW 0 -Get string interpolation working for destroy
+  // $('.flash').html("<%# escape_javascript(render partial: 'items/destroy', locals: {item: @item} ) %>")
 <% else %>
-  // REVIEW make sure this properly shows alert via flash div of application.html.erb
+  // REVIEW 7 -how can I test that this alert works properly? From Rspec?
   $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %></div>");
 <% end %>
