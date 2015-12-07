@@ -5,6 +5,7 @@
     <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
 
     <%= item.name %></br>
+    <p> Task age: <%= distance_of_time_in_words( item.created_at, Time.now) %> </p>
   </small>
  </div>
 <% end %>
