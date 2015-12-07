@@ -28,7 +28,8 @@ end
 
 150.times do
   item = Item.all.sample
-  item.update_attribute(:created_at, (rand*30).days.ago)
+  #REVIEW Best method for generating random number? THis created 50+ similar times
+  item.update_attribute(:created_at, (rand*30 + 6).days.ago)
 end
 
 puts "#{User.count} users seeded."
