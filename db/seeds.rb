@@ -13,13 +13,22 @@
   )
 end
 
-User.create!(email: "admin@awesome.com", password: "password")
+#Test admin account
+User.create!(email: "admin@example.com", password: "password")
+#Auto-confirm admin
+user = User.last
+user.update_attribute(:confirmed_at, Time.now)
 
 150.times do
   Item.create!(
     name: Faker::Lorem.sentence,
     user: User.all.sample
   )
+end
+
+150.times do
+  item = Item.all.sample
+  item.update_attribute(:created_at, (rand*30).days.ago)
 end
 
 puts "#{User.count} users seeded."
