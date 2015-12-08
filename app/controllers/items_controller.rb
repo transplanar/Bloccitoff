@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
     @item.save
 
     respond_to do |format|
-      format.html
+      format.html { redirect_to current_user }
       format.js
     end
   end
@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
     @item.destroy
 
     respond_to do |format|
-      format.html
+      format.html { redirect_to current_user }
       format.js
     end
   end

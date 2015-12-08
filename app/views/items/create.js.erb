@@ -1,17 +1,2 @@
-//REVIEW 1- should this be ".saved" ?
- // <%# if @item.created? %>
-// REVIEW 1 - why is it rendering the create view?
-  // $('#item'+<%= item.id %>).html("<%= escape_javascript(render @user)  %>")
-  $('js-items').html("<%= escape_javascript(render @user.items) %>")
-  // $('js-items').html("<%# escape_javascript(render 'users/show') %>")
-//<%# else %>
-  // $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %></div>");
-//<%# end %>
-
-<%# if @item.destroyed? %>
-  // $('#item-' +<%= @item.id %>).hide();
-  // $('.flash').prepend("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button> Task destroyed </div>");
-<%# else %>
-  // $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %></div>");
-<%# end %>
-90
+$('.js-items').append("<%= escape_javascript(render @item) %>");
+$('#items-form').html("<%= escape_javascript(render 'items/form') %>");
