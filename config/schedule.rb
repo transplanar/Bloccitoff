@@ -21,6 +21,7 @@
 
 # REVIEW What is cron job? https://github.com/javan/whenever
 # REVIEW how do I test this is working correctly?
+# TODO use Rufus scheduler (google)
 every 24.hours do
   rake "todo:delete_items"
 end
