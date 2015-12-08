@@ -26,9 +26,7 @@ user.update_attribute(:confirmed_at, Time.now)
   )
 end
 
-150.times do
-  item = Item.all.sample
-  #REVIEW Best method for generating random number? THis created 50+ similar times
+Item.all.each do |item|
   item.update_attribute(:created_at, (rand*30 + 6).days.ago)
 end
 

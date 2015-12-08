@@ -40,10 +40,4 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  # REVIEW Needed? Outdated?
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-
-  # REVIEW Needed for current ver of Heroku?
-  # config.assets.initialize_on_precompile = false
 end
