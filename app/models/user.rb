@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   has_many :items
 
-# TODO Add dependant: :destroy later
-
+  # TODO: Add dependant: :destroy later
+# NOTE Make this user profile only visible to owner
+  # scope :visible_to, ->  (user){ user ? all : where(public: true) }
+  # scope :visible_to, ->  (user){ (user == self || user.admin) ? all : where(public: true) }
+  scope :visible_to, ->  (user){ user.admin || user == self ? all : where(public: true) }
+  # scope :visible_to, -> { where(public: true) }
 end

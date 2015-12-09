@@ -10,6 +10,8 @@
   User.create!(
     email: Faker::Internet.email,
     password: Faker::Internet.password
+    # NOTE Added by GPC
+    # public: true
   )
 end
 
@@ -18,6 +20,13 @@ User.create!(email: "admin@example.com", password: "password")
 #Auto-confirm admin
 user = User.last
 user.update_attribute(:confirmed_at, Time.now)
+user.update_attribute(:admin, true)
+
+User.create!(email: "member@example.com", password: "password")
+User.last.update_attribute(:confirmed_at, Time.now)
+
+# Make one user have a private profile
+User.first.update_attribute(:public, false)
 
 150.times do
   Item.create!(
