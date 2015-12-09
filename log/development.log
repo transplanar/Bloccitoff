@@ -37789,3 +37789,9 @@ ActiveRecord::RecordNotFound (Couldn't find Item with 'id'=118 [WHERE "items"."u
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
   Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (12.4ms)
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT 1[0m  [["id", nil]]
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", nil]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = ?  [["email", "amie@wisokyblanda.com"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = ?[0m  [["email", "amie@wisokyblanda.com"]]
+  [1m[35mItem Load (1.0ms)[0m  SELECT "items".* FROM "items"
