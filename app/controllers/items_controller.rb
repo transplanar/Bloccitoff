@@ -13,8 +13,8 @@ class ItemsController < ApplicationController
     # end
 
     # NOTE New
-
-    @item = current_user.items.new(item_params)
+    # user = params(:user)
+    @item = Item.new(item_params)
     @item.save
 
     respond_to do |format|
@@ -28,6 +28,7 @@ class ItemsController < ApplicationController
     @item.destroy
 
     respond_to do |format|
+      # REVIEW This doesn't appear to do anything...?
       format.html { redirect_to current_user }
       format.js
     end
