@@ -6,7 +6,9 @@ class UsersController < ApplicationController
   def show
     # @user = User.find(params[:id])
     # @user = current_user
-    @user = User.find(params[:id])
+    # TODO Condense with ternary operator
+    @user = User.find(params[:id]) if params[:id].present?
+    @user ||= current_user
     # @user = current_user
     # @items = Item.all
     @items = @user.items.all

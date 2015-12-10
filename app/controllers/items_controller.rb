@@ -14,7 +14,10 @@ class ItemsController < ApplicationController
 
     # NOTE New
     # user = params(:user)
-    @item = Item.new(item_params)
+    # TODO Condense with ternary operator
+    @user = User.find(params[:user_id]) if params[:user_id].present?
+    @user ||= current_user
+    @item = @user.items.new(item_params)
     @item.save
 
     respond_to do |format|
