@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 # TODO View other user profiles
   # resources :users, only: [:show]
   # resources :users, only: [:show, :index]
-  resources :users
-  resources :items
+  resources :users, only: [:show, :index] do
+    resources :items, only: [:index, :create, :destroy]
+  end
 
   # root to: 'users#show', [current_user.id]
   # TODO Default to the show view of a specific user?
