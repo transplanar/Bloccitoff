@@ -1,8 +1,5 @@
 class ItemsController < ApplicationController
   def create
-    # NOTE New
-    # user = params(:user)
-    # TODO Condense with ternary operator
     @user = User.find(params[:user_id]) if params[:user_id].present?
     @user ||= current_user
     @item = @user.items.new(item_params)
@@ -19,7 +16,6 @@ class ItemsController < ApplicationController
     @item.destroy
 
     respond_to do |format|
-      # REVIEW This doesn't appear to do anything...?
       format.html { redirect_to current_user }
       format.js
     end
