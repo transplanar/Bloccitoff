@@ -1,9 +1,7 @@
 <%= form_for [@user, Item.new], remote: true do |f| %>
   <div class="form-group">
     <%= f.label :name, class: 'sr-only' %>
-    <!-- <%# f.text_field :name, class: 'form-control', placeholder: "Describe your new task" %> -->
     <%= f.text_field :name, class: 'form-control', placeholder: "Describe your new task"%>
   </div>
-  <!-- <%# f.submit "Add Task", class: 'btn btn-default pull-right' %> -->
   <%= f.submit "Add Task", class: 'btn btn-default pull-right' %>
 <% end %>

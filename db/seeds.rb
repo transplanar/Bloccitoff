@@ -10,8 +10,14 @@
   User.create!(
     email: Faker::Internet.email,
     password: Faker::Internet.password
-    # NOTE Added by GPC
-    # public: true
+  )
+end
+
+3.times do
+  User.create!(
+    email: "private_" + Faker::Internet.email,
+    password: Faker::Internet.password,
+    public: false
   )
 end
 

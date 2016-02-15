@@ -8,6 +8,7 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <!-- IDEA only invalid fields reset if improper input is given -->
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
