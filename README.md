@@ -1,6 +1,6 @@
 #Checkov
 
-[See Portfolio Writeup](https://transplanar.github.io/portfolio//checkov/)
+[View Case Study](https://transplanar.github.io/portfolio//checkov/)
 
 [View on Heroku](https://checkov-app.herokuapp.com/)
 
